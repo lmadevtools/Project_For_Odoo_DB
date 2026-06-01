@@ -9,11 +9,11 @@ Classes (contain the business class)
 |------ product.py           : class to manage the products  
 |------ stock_move.py        : class to manage the stock moves (add / remove in stock)    
 Data    (created at start if doesn't exist. This directory will contains the .json files)  
-|------ data_customers.json  : file containing the customers in JSON format  
-|------ data_orders.json     : file containing the orders in JSON format  
-|------ data_products.json   : file containing the products in JSON format  
+|------ data_customers.json  : (NOT_USED_ANYMORE) file containing the customers in JSON format  
+|------ data_orders.json     : (NOT_USED_ANYMORE) file containing the orders in JSON format  
+|------ data_products.json   : (NOT_USED_ANYMORE) file containing the products in JSON format  
 |------ stock_moves.csv      : file containing the stock_moves export in CSV format  
-|------ stock_moves.json     : file containing the stock_moves in JSON format  
+|------ stock_moves.json     : (NOT_USED_ANYMORE) file containing the stock_moves in JSON format  
 Logs    (created at start if doesn't exist. This directory will contains the logs of the application)  
 |------ app.log              : log file  
 |------ run_tests.txt        : log file for the result of the tests  
@@ -99,57 +99,7 @@ Personnal note:
 
 6)  In Order, I used a property for the subtotal. As it is based on unitprice*quantity, it is a way to always have an up-to-date value, even if we change the quantity.
 
-7)  product, customers and orders json looks like this :
-
-8)  (NOT USED ANYMORE)   Difference between products/customers/orders JSON vs stock_move JSON
-
-{
-  "products": {
-    "P1": {
-      "product_id": "P1",
-      "name": "Laptop Pro 15",
-      "price": 1299.99,
-      "quantity": 19,
-      "minimum_stock": 3,
-      "category": "Hardware",
-      "active": true
-    },
-    "P2": {
-      "product_id": "P2",
-      "name": "Souris Ergonomique",
-      "price": 29.99,
-      "quantity": 45,
-      "minimum_stock": 10,
-      "category": "Hardware",
-      "active": true
-    }
-}
-
-while stock move json look like this
-
-  "stock_moves": \[
-    {
-      "product_id": "P1",
-      "product_name": "Laptop Pro 15",
-      "quantity": 10,
-      "direction": "in",
-      "reason": "Recept",
-      "created_at": "2026-05-29 16:06:53"
-    },
-    {
-      "product_id": "P2",
-      "product_name": "Souris Ergonomique",
-      "quantity": 3,
-      "direction": "out",
-      "reason": "Sold",
-      "created_at": "2026-05-29 16:06:53"
-    }
-  \]
-}
-
-the reason is simply because there is an interest to see the key for product/cutomers/order, instead of stock_move who is just linked to a product_id with some others informations.
-
-9)   Getter/Setter :
+7)   Getter/Setter :
 
     order.py :
     °status change only by confirm/cancel/mark_done
@@ -158,17 +108,7 @@ the reason is simply because there is an interest to see the key for product/cut
     stock_move.py :
     ° read only. stock move should not be modified after creation.
 
-
-
-
-
-
-
-
-
-
-
-
+8) Using @patch to works with mock (fake object to avoir connecting to the true DB)  
 
 ------------------
 Other informations :  
