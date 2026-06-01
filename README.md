@@ -41,6 +41,124 @@ main_menu.py                 : main file with menu for users  (CLI)
 main_test_DB.py              : main file with DB tests   
 run_tests.py                 : execute the tests  
 
+-----------------
+
+updates:
+
+27/05/2026 :
+
+  -  Writing of the classes customer, product and order
+
+28/05/2026 :
+
+  -  Writing of the class inventory
+  -  Management of the classes customer, product, order in JSON
+  -  Structure of the projects (folders Classes, Data, ...)
+  -  Added Utils ( helper, validator) and a config file
+  -  Management of a log
+  -  Management of the stock_moves, save in json and export in CSV
+  -  Update of the auto generated ID for order ( CMD/YEAR/XXXX ) based on param located in config.py
+  -  Writing of the README
+
+29/05/2026 :
+
+  -  Writing of the tests cases + save of the result in a file run_tests.txt
+  -  Writing of the main_menu.py (Command Line Interface (CLI))
+  -  Added Utils/mail_sender.py to manage mail. Not used for the moment. But should be interesting to manage auto order per mail to the supplier for low stock
+  -  Added the necessary Getter/Setter in the differents classes.
+  -  Wrote the personnal note for the explanation of different of my coding choices.
+
+01/06/2026 :  
+  - Creation of the file init_db.sql and drop_db.sql
+  - Writing class db_connector and queries
+  - Put in comment JSON code and udpating it by DB
+  - Writing the unit test for DB
+  - Writing the main_test_DB to try the DB access
+
+---------
+
+Personnal note:
+
+1)   The class mail_sender is not used. I just put it in case we would like to implement an automatic order for low stock products.
+
+2)  Using to_dict instad of __dict__ ?
+        to manage what I want to display if I need to get only some infos, and leaving __dict__ at his normal use if I need to display everything (including eventuals intern var)
+        denormalisation (exemple : in order, I want to get the product.name)
+
+3)   classmethod from_dict ?
+    if I call
+    p=product then product(???) #I don't have the informations here.
+    then
+    p.from_dict(data) #a little late : p already exists.
+    I should have done a p_load_from_dict(data) but I lose all the goal of the checks done at the creation, and I will get ValueError (and no way to disable checks)
+    Also, it avoid an eventual error occuring between the creation and the p_load_from_dict...
+
+4) __str__ is used as display for user, while __repr__ is used as a display for dev, with more technical information.
+
+5)  !r in repr add a ' : this permit to see, by exemple ID = 'P1', instead of ID = P1, and to be sure it is a string
+
+6)  In Order, I used a property for the subtotal. As it is based on unitprice*quantity, it is a way to always have an up-to-date value, even if we change the quantity.
+
+7)  product, customers and orders json looks like this :
+
+8)  (NOT USED ANYMORE)   Difference between products/customers/orders JSON vs stock_move JSON
+
+{
+  "products": {
+    "P1": {
+      "product_id": "P1",
+      "name": "Laptop Pro 15",
+      "price": 1299.99,
+      "quantity": 19,
+      "minimum_stock": 3,
+      "category": "Hardware",
+      "active": true
+    },
+    "P2": {
+      "product_id": "P2",
+      "name": "Souris Ergonomique",
+      "price": 29.99,
+      "quantity": 45,
+      "minimum_stock": 10,
+      "category": "Hardware",
+      "active": true
+    }
+}
+
+while stock move json look like this
+
+  "stock_moves": \[
+    {
+      "product_id": "P1",
+      "product_name": "Laptop Pro 15",
+      "quantity": 10,
+      "direction": "in",
+      "reason": "Recept",
+      "created_at": "2026-05-29 16:06:53"
+    },
+    {
+      "product_id": "P2",
+      "product_name": "Souris Ergonomique",
+      "quantity": 3,
+      "direction": "out",
+      "reason": "Sold",
+      "created_at": "2026-05-29 16:06:53"
+    }
+  \]
+}
+
+the reason is simply because there is an interest to see the key for product/cutomers/order, instead of stock_move who is just linked to a product_id with some others informations.
+
+9)   Getter/Setter :
+
+    order.py :
+    °status change only by confirm/cancel/mark_done
+    °total already in @property.
+    °lines should not be modified directly.
+    stock_move.py :
+    ° read only. stock move should not be modified after creation.
+
+
 
 
 
@@ -53,7 +171,7 @@ run_tests.py                 : execute the tests
 
 
 ------------------
-
+Other informations :  
 To use psycopg2 :  
 [Link from geeksforgeeks for step by step install](https://www.geeksforgeeks.org/python/how-to-install-psycopg2-in-visual-studio-code/)
 
