@@ -1,0 +1,21 @@
+created_at,product_id,product_name,direction,quantity,reason
+2026-05-29 16:06:53,P1,Laptop Pro 15,in,10,Recept
+2026-05-29 16:06:53,P2,Souris Ergonomique,out,3,Sold
+2026-06-01 08:36:23,P5,Laptop Pro 15,out,1,Order CMD/2026/0003
+2026-06-01 08:36:23,P6,Souris Ergonomique,out,2,Order CMD/2026/0003
+2026-06-01 08:36:23,P5,Laptop Pro 15,in,10,Recept
+2026-06-01 08:36:28,P9,Laptop Pro 15,out,1,Order CMD/2026/0005
+2026-06-01 08:36:28,P10,Souris Ergonomique,out,2,Order CMD/2026/0005
+2026-06-01 08:36:28,P9,Laptop Pro 15,in,10,Recept
+2026-06-01 08:36:48,P13,Laptop Pro 15,out,1,Order CMD/2026/0007
+2026-06-01 08:36:48,P14,Souris Ergonomique,out,2,Order CMD/2026/0007
+2026-06-01 08:36:48,P13,Laptop Pro 15,in,10,Recept
+2026-06-01 08:36:48,P14,Souris Ergonomique,out,3,Sold
+2026-06-01 08:36:57,P17,Laptop Pro 15,out,1,Order CMD/2026/0009
+2026-06-01 08:36:57,P18,Souris Ergonomique,out,2,Order CMD/2026/0009
+2026-06-01 08:36:57,P17,Laptop Pro 15,in,10,Recept
+2026-06-01 08:36:57,P18,Souris Ergonomique,out,3,Sold
+2026-06-01 08:37:21,P21,Laptop Pro 15,out,1,Order CMD/2026/0011
+2026-06-01 08:37:21,P22,Souris Ergonomique,out,2,Order CMD/2026/0011
+2026-06-01 08:37:21,P21,Laptop Pro 15,in,10,Recept
+2026-06-01 08:37:21,P22,Souris Ergonomique,out,3,Sold
