@@ -2,7 +2,7 @@
 Project_Odoo with PostGre DB
 
 To use psycopg2 :  
-[Link from geelsforgeeks for step by step install](https://www.geeksforgeeks.org/python/how-to-install-psycopg2-in-visual-studio-code/)
+[Link from geeksforgeeks for step by step install](https://www.geeksforgeeks.org/python/how-to-install-psycopg2-in-visual-studio-code/)
 
 To install psycopg2, we need to use the terminal in VS Code.  
 Before that, let's create a virtual environment for our Python projects to keep dependencies isolated.  
