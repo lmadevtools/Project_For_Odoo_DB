@@ -17,7 +17,7 @@ Data    (created at start if doesn't exist. This directory will contains the .js
 Logs    (created at start if doesn't exist. This directory will contains the logs of the application)  
 |------ app.log              : log file  
 |------ run_tests.txt        : log file for the result of the tests  
-Sql
+Sql  
 |------ drop_db.sql          : SQL script to delete tables  
 |------ init_db.sql          : SQL script to init tables  
 Tests  (contains the units test)  
