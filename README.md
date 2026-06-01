@@ -74,6 +74,7 @@ updates:
   - Put in comment JSON code and udpating it by DB
   - Writing the unit test for DB
   - Writing the main_test_DB to try the DB access
+  - Writing the db_faker to complete DB with fake data
 
 ---------
 
