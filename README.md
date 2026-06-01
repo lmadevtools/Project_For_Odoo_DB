@@ -28,3 +28,5 @@ Step 3: Install psycopg2
 Now that our environment is ready, we can install psycopg2 using pip.  
 pip install psycopg2  
 
+------------
+venv.zip contains all the file installed in the folder venv.  
