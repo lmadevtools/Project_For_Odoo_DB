@@ -140,4 +140,8 @@ Now that our environment is ready, we can install psycopg2 using pip.
 pip install psycopg2  
 
 ------------
+
+for faker :
+pip install faker
+------------
 venv.zip contains all the file installed in the folder venv.  
