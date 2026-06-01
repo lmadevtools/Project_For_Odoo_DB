@@ -29,10 +29,10 @@ Tests  (contains the units test)
 |------ test_product         : tests for the class product  
 |------ test_stock_move      : tests for the class stock_move  
 Utils   (contains Utils classes used by others classes)  
-|------ __init__.py          : to marks the directory Utils as a regular package
+|------ __init__.py          : to marks the directory Utils as a regular package  
 |------ db_connector.py      : class to manage the connection and queries to the DB  
 |------ helper.py            : class containing functions used by others class as TimeStamp function, Logs functions, etc  
-|------ mail_sender          : (NOT_USED) should manage the mail sending part. (Should be used to automatically send mail to order low stock products)  
+|------ mail_sender          : (NOT_USED) manage the mail sending part. (Should be used to automatically send mail to order low stock products)  
 |------ queries.py           : list of queries used in the project.  
 |------ validator.py         : class containing validating functions used by others class as is_mail_valid to check if the format of a mail is correct   
 config.py                    : config file (containing path, etc)  
