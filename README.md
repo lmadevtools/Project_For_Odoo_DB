@@ -143,7 +143,24 @@ pip install psycopg2
 
 ------------
 
-for faker :
-pip install faker
+for faker 
+pip installer faker
+
 ------------
+
 venv.zip contains all the file installed in the folder venv.  
+
+--------
+
+<pre>
+Personnal test between __str__ and __repr__ and !r and r 
+    Product1 = Product(1, 'test', 10, 10, 5)
+    print(Product1)         #str    #[1] test | Category : General | Price : 10.00€ | Stock : 10
+    print(f"{Product1}")    #str    #[1] test | Category : General | Price : 10.00€ | Stock : 10
+    print(f"{Product1!r}")  #repr   #Product(id=1, name='test', price=10, quantity=10, active=True)
+    print(repr(Product1))   #repr   #Product(id=1, name='test', price=10, quantity=10, active=True)
+    #r for raw string. don't care for \n \t, ...
+    print(r"\nC:\test\test")        #\nC:\test\test
+    #no r so \n or \t are treated
+    print("\nC:\test\test")         #C:      est     est
+</pre>
