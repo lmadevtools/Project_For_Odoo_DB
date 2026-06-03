@@ -110,7 +110,7 @@ Personnal note:
     stock_move.py :
     ° read only. stock move should not be modified after creation.
 
-8) Using @patch to works with mock (fake object to avoir connecting to the true DB)  
+8) Using @patch to works with mock (fake object to avoid connecting to the true DB)  
 
 ------------------
 Other informations :  
@@ -143,8 +143,8 @@ pip install psycopg2
 
 ------------
 
-for faker 
-pip installer faker
+for faker  
+pip installer faker  
 
 ------------
 
