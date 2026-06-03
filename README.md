@@ -81,10 +81,10 @@ updates:
 
 Personnal note:
 
-1)   The class mail_sender is not used. I just put it in case we would like to implement an automatic order for low stock products.
+1)  The class mail_sender is not used. I just put it in case we would like to implement an automatic order for low stock products.
 
-2)  Using to_dict instad of __dict__ ?
-        to manage what I want to display if I need to get only some infos, and leaving __dict__ at his normal use if I need to display everything (including eventuals intern var)
+2)  Using to_dict instad of \_\_dict\_\_ ?
+        to manage what I want to display if I need to get only some infos, and leaving \_\_dict\_\_ at his normal use if I need to display everything (including eventuals intern var)
         denormalisation (exemple : in order, I want to get the product.name)
 
 3)   classmethod from_dict ?
@@ -95,7 +95,7 @@ Personnal note:
     I should have done a p_load_from_dict(data) but I lose all the goal of the checks done at the creation, and I will get ValueError (and no way to disable checks)
     Also, it avoid an eventual error occuring between the creation and the p_load_from_dict...
 
-4) __str__ is used as display for user, while __repr__ is used as a display for dev, with more technical information.
+4) \_\_str\_\_ is used as display for user, while \_\_repr\_\_ is used as a display for dev, with more technical information.
 
 5)  !r in repr add a ' : this permit to see, by exemple ID = 'P1', instead of ID = P1, and to be sure it is a string
 
