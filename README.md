@@ -2,7 +2,7 @@
 Project_Odoo with PostGre DB
 
 Classes (contain the business class)  
-|------ __init__.py          : to marks the directory Classes as a regular package  
+|------ \_\_init\_\_.py          : to marks the directory Classes as a regular package  
 |------ customer.py          : class to manage the customers  
 |------ inventory.py         : class to centralize the actions with the others business class (customer, order, product) and manage JSON load / save files  
 |------ order.py             : class to manage the orders  
@@ -22,7 +22,7 @@ Sql
 |------ init_db.sql          : SQL script to init tables  
 |------ update_total.sql     : SQL script to recalculate subtotal and total (used after faker is used to have correct total and subtotal of order/lines)
 Tests  (contains the units test)  
-|------ __init__.py          : to marks the directory Tests as a regular package  
+|------ \_\_init\_\_.py          : to marks the directory Tests as a regular package  
 |------ test_customer.py     : tests for the class customer  
 |------ test_helper          : tests for the helper classes  
 |------ test_inventory       : tests for the class inventory  
@@ -30,7 +30,7 @@ Tests  (contains the units test)
 |------ test_product         : tests for the class product  
 |------ test_stock_move      : tests for the class stock_move  
 Utils   (contains Utils classes used by others classes)  
-|------ __init__.py          : to marks the directory Utils as a regular package  
+|------ \_\_init\_\_.py          : to marks the directory Utils as a regular package  
 |------ db_connector.py      : class to manage the connection and queries to the DB  
 |------ helper.py            : class containing functions used by others class as TimeStamp function, Logs functions, etc  
 |------ mail_sender          : (NOT_USED) manage the mail sending part. (Should be used to automatically send mail to order low stock products)  
