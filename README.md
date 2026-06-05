@@ -110,7 +110,23 @@ Personnal note:
     stock_move.py :
     ° read only. stock move should not be modified after creation.
 
-8) Using @patch to works with mock (fake object to avoid connecting to the true DB)  
+8) Using @patch to works with mock (fake object to avoid connecting to the true DB)
+9) 
+10) In test_inventory the patch replace all the class DBConnector whren Inventory import it (so Inventory thinks it use a true DBConnector but in reality it is a complete mock. all method (connect, execute, commit and disconnect) are automatically mockek
+    in test_db_connector we replace only the function connect from psycopg2 in the module db_connector (we only mock the network layer. so DBconnector is real but when he tries to call psycopg2.connect to join PostGreSQL, he get a mock instead)
+
+<pre>
+                                 test_inventory                      test_db_connector           
+  What is mocked :               full DB_connector class             only psycopg2.connect 
+  What we try    :               business logic from inventory       behavior of DBConnector
+  DBConnector executed ?         nop, fully replaced                 Yes. the real code is running
+  Network connection             nop                                 Nop
+
+</pre>
+
+goal is to ever mock as close as what we don't want to execute.  
+In test_inventory, we don't want DB at all, so we mock totally DBConnector.  
+In test_db_connector,  we want to try DB_Connector itself, so we mock only the network layer  
 
 ------------------
 Other informations :  
