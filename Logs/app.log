@@ -1,0 +1,29 @@
+2026-06-08 16:43:08,371 - INFO - Starting the app
+2026-06-08 16:43:18,881 - INFO - App stopped
+2026-06-08 16:43:23,176 - INFO - === Demo starting ===
+2026-06-08 16:43:23,271 - INFO - --- PRODUCTS — Creation ---
+2026-06-08 16:43:23,274 - INFO - 4 products created
+2026-06-08 16:43:23,274 - INFO - --- PRODUCTS — Stock management ---
+2026-06-08 16:43:23,280 - INFO - --- PRODUCTS — Low stock report ---
+2026-06-08 16:43:23,281 - INFO - --- PRODUCTS — Archive ---
+2026-06-08 16:43:23,282 - INFO - Product archived : P3
+2026-06-08 16:43:23,283 - INFO - --- CUSTOMERS — Creation ---
+2026-06-08 16:43:23,285 - INFO - 3 customers created
+2026-06-08 16:43:23,286 - INFO - --- CUSTOMERS — Archive ---
+2026-06-08 16:43:23,288 - INFO - Customer archived : C3
+2026-06-08 16:43:23,291 - INFO - --- ORDERS — Jeanne : draft \u2192 confirmed \u2192 done ---
+2026-06-08 16:43:23,293 - INFO - Order created : CMD/2026/0001
+2026-06-08 16:43:23,298 - INFO - Order confirmed : CMD/2026/0001
+2026-06-08 16:43:23,299 - INFO - Order done : CMD/2026/0001
+2026-06-08 16:43:23,299 - INFO - --- ORDERS — Benoit : draft \u2192 confirmed \u2192 cancelled ---
+2026-06-08 16:43:23,301 - INFO - Order created : CMD/2026/0002
+2026-06-08 16:43:23,305 - INFO - Order cancelled : CMD/2026/0002
+2026-06-08 16:43:23,306 - INFO - --- ORDERS — Draft cancelled without stock impact ---
+2026-06-08 16:43:23,307 - INFO - Draft order cancelled : CMD/2026/0003
+2026-06-08 16:43:23,307 - INFO - --- ORDERS — List by status ---
+2026-06-08 16:43:23,308 - INFO - --- STOCK MOVES — History ---
+2026-06-08 16:43:23,309 - INFO - --- STOCK MOVES — CSV Export ---
+2026-06-08 16:43:23,310 - INFO - CSV exported : demo_export.csv
+2026-06-08 16:43:23,311 - INFO - --- SUMMARY ---
+2026-06-08 16:43:23,311 - INFO - Demo completed successfully
+2026-06-08 16:43:23,311 - INFO - === Demo ended ===
