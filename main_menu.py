@@ -3,10 +3,7 @@ from Classes.inventory import Inventory
 
 inv = Inventory()
 
-# ------------------------------------------------------------------
 # Helpers
-# ------------------------------------------------------------------
-
 def separator():
     print("\n" + "=" * 50)
 
@@ -56,10 +53,7 @@ def choose(options: list, label="Choice") -> str:
             print("  integer awaited")
 
 
-# ------------------------------------------------------------------
 # Products
-# ------------------------------------------------------------------
-
 def menu_produits():
     while True:
         separator()
@@ -176,10 +170,8 @@ def archiver_produit():
     pause()
 
 
-# ------------------------------------------------------------------
-# Customers
-# ------------------------------------------------------------------
 
+# Customers
 def menu_clients():
     while True:
         separator()
@@ -232,10 +224,7 @@ def ajouter_client():
     pause()
 
 
-# ------------------------------------------------------------------
 # Orders
-# ------------------------------------------------------------------
-
 def menu_commandes():
     while True:
         separator()
@@ -369,10 +358,7 @@ def changer_statut_commande(action):
     pause()
 
 
-# ------------------------------------------------------------------
 # Reports
-# ------------------------------------------------------------------
-
 def menu_rapports():
     while True:
         separator()
@@ -425,10 +411,8 @@ def exporter_csv():
     pause()
 
 
-# ------------------------------------------------------------------
-# Main menu
-# ------------------------------------------------------------------
 
+# Main menu
 def menu_principal():
     while True:
         separator()
@@ -460,7 +444,7 @@ def menu_principal():
             print("  Invalid choice")
 
 
-# ======================================================================
+#==============================================
 
 if __name__ == "__main__":
     log_message("Starting the app", "info")
