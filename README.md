@@ -180,3 +180,7 @@ Personnal test between __str__ and __repr__ and !r and r
     #no r so \n or \t are treated
     print("\nC:\test\test")         #C:      est     est
 </pre>
+
+
+-----
+emoji picker for string : Win + ;
