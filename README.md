@@ -38,10 +38,10 @@ Utils   (contains Utils classes used by others classes)
 |------ queries.py                       : list of queries used in the project.  
 |------ validator.py                     : class containing validating functions used by others class as is_mail_valid to check if the format of a mail is correct   
 config.py                                : config file (containing path, etc)  
-main.py                                  : main file to test functions, writing a log file.
+main.py                                  : main file to test functions, writing a log file.  
 main_old.py                              : first main file to test function  
 main_menu.py                             : main file with menu for users (CLI)   
-main_test_DB.py                          : main file with DB tests + db_faker
+main_test_DB.py                          : main file with DB tests + db_faker  
 run_tests.py                             : execute the tests  
 
 -----------------
