@@ -20,8 +20,8 @@ Logs    (created at start if doesn't exist. This directory will contains the log
 Sql  
 |------ drop_db.sql                      : SQL script to delete tables  
 |------ init_db.sql                      : SQL script to init tables  
-|------ insert_data.sql                  : SQL script to insert data in tables instead using the DB_faker (following the user preference)
-|------ update_tables_after_faker.sql    : SQL script to recalculate subtotal and total (called after faker is used to have correct total and subtotal in order/lines)
+|------ insert_data.sql                  : SQL script to insert data in tables instead using the DB_faker (following the user preference)  
+|------ update_tables_after_faker.sql    : SQL script to recalculate subtotal and total (called after faker is used to have correct total and subtotal in order/lines)  
 Tests  (contains the units test)  
 |------ \_\_init\_\_.py                  : to marks the directory Tests as a regular package  
 |------ test_customer.py                 : tests for the class customer  
