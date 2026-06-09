@@ -162,7 +162,7 @@ pip install psycopg2
 ------------
 
 for faker  
-pip installer faker  
+pip install faker  
 
 ------------
 
