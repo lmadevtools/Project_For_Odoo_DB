@@ -113,8 +113,7 @@ Personnal note:
     ° read only. stock move should not be modified after creation.
 
 8) Using @patch to works with mock (fake object to avoid connecting to the true DB)
-9) 
-10) In test_inventory the patch replace all the class DBConnector whren Inventory import it (so Inventory thinks it use a true DBConnector but in reality it is a complete mock. all method (connect, execute, commit and disconnect) are automatically mockek
+9) In test_inventory the patch replace all the class DBConnector when Inventory import it (so Inventory thinks it use a true DBConnector but in reality it is a complete mock. all method (connect, execute, commit and disconnect) are automatically mocked
     in test_db_connector we replace only the function connect from psycopg2 in the module db_connector (we only mock the network layer. so DBconnector is real but when he tries to call psycopg2.connect to join PostGreSQL, he get a mock instead)
 
 <pre>
