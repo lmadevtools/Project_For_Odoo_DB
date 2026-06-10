@@ -186,3 +186,7 @@ Personnal test between __str__ and __repr__ and !r and r
 
 -----
 emoji picker for string : Win + ;
+
+-----
+
+postgreSQL in extensions
