@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS stock_moves;
+DROP TABLE IF EXISTS order_lines;
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS products;
