@@ -4,6 +4,8 @@ Project_Odoo with PostGre DB
 Classes (contain the business class)  
 |------ \_\_init\_\_.py                  : to marks the directory Classes as a regular package  
 |------ customer.py                      : class to manage the customers  
+|------ customer_fonctionnelV1.py        : class to manage the customers - updated to work with functionnal paradigm. V1 is my test from scratch (with dict) 
+|------ customer_fonctionnelV2.py        : class to manage the customers - updated to work with functionnal paradigm. V2 is my class Customer updated following what I learnt in V1  
 |------ inventory.py                     : class to centralize the actions with the others business class (customer, order, product) and manage JSON load / save files  
 |------ order.py                         : class to manage the orders  
 |------ product.py                       : class to manage the products  
@@ -39,6 +41,9 @@ Utils   (contains Utils classes used by others classes)
 |------ validator.py                     : class containing validating functions used by others class as is_mail_valid to check if the format of a mail is correct   
 config.py                                : config file (containing path, etc)  
 main.py                                  : main file to test functions, writing a log file.  
+main_customer_fonctionnel.py             : main file to test customer_fonctionnelV1.py  
+main_customer_fonctionnel.py             : main file to test customer_fonctionnelV2.py  
+main_gui.py                              : main file for tkinter test
 main_old.py                              : first main file to test function  
 main_menu.py                             : main file with menu for users (CLI)   
 main_test_DB.py                          : main file with DB tests + db_faker  
